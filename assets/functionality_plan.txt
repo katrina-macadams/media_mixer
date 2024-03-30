@@ -5,15 +5,14 @@ Mermaid Music Mixer is an interactive music experience using sounds inspired fro
 Limitations:
 - User should not be able to put more than one sound in each slot 
 - Sound should not play when it is no longer in the slot 
-- Sounds added after mixer has started will start playing at the end of mixer (10 seconds) not before
-- User cannot play more than 7 sounds at once
+- Sounds added after mixer has started will start playing at the end of mixer (8 seconds) not before
+- User cannot play more than 4 sounds at once
 - Sounds should not play if slots are empty
 - User cannot use the same sound twice
 
 What I need to know:
 - When the user places a sound in the slot 
 - Which sound they picked 
-- Which slot they picked 
 - When a user takes a sound out of a slot 
 - At what time e during the mixer loop the sound was placed 
 
@@ -25,10 +24,10 @@ Step 2.
 Once a sound is dragged to a slot, the mixer will start and ONLY the in the slot will play 
 
 Step 3. 
-User can put up to 7 sounds and they will all play at the start of the mixer, each mixer loop lasts 10 seconds.
+User can put up to 4 sounds and they will all play at the start of the mixer, each mixer loop lasts 8 seconds.
 
 Step 4. 
-If user desire to change the mix, they can simple tap on the slot and it will be put back 
+If user desire to change the mix, they can simple tap on the slot and it will be put back or reset the entire thing with reset button
 
 Step 5. Once a slot becomes empty it can be filled with another sound (or the same one, there’s no limitations on that). Once the slot is filled, it will play that sound at the start of the mixer
 
