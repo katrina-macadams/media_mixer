@@ -1,32 +1,22 @@
 //variables
 
 let soundBoard = document.querySelector(".sound_boards"), //puzzleBoard
-    seaSound = document.querySelectorAll('img'), //puzzlePieces
+    seaSound = document.querySelectorAll('#sounds img'), //puzzlePieces
     slotContainer = document.querySelectorAll(".slot_cont"),    
     soundContainer = document.querySelector(".sound_cont"), //pieceContainer
     slotZone = document.querySelectorAll('.sand_box'), //dropZone
 
-    soundIcons = document.querySelectorAll("#sounds img"),
-    theAudioEl = document.querySelector('#audioEl'),
-    pauseButton = document.querySelector('#pause'),
-    resetButton = document.querySelector('#reset'),
-    helpButton = document.querySelector('#help'),
-
-
     draggedSound; //draggedPiece
+
+
+const
+resetButton = document.querySelector('#reset'),
+pauseButton = document.querySelector('#pause');
 
     
 //functions
 
 // drag n drop
-
-function resetSounds() {
-    slotZone.forEach (zone => {
-        if (zone.firstElementChild) {
-            soundContainer.appendChild(zone.firstElementChild);
-        }
-    });
-}
 
 function handleStartDrag() {
     console.log('started dragging this piece:', this);
@@ -47,29 +37,64 @@ function handleDrop(e) {
     }
 
     this.appendChild(draggedSound); 
+
+    playAudio(draggedSound.dataset.trackref); // Play the audio when dropped
+
+
 }
 
-// audio 
+function resetSounds() {
+   
+    // Iterate over each slot
+    slotZone.forEach(zone => {
+        let slotContent = zone.firstElementChild;
+        if (slotContent) {
+            // Remove the image from the slot
+            zone.removeChild(slotContent);
+            
+            // Append the image back to the sound container
+            soundContainer.appendChild(slotContent);
+
+        }
+        pauseAudio();
+    });
+    console.log("All slots cleared and images returned to the sound container");
+}
+
 
 function loadAudio() {
-    let currentSrc = `audio/${this.dataset.trackref}.mp3`;
-    theAudioEl.src = currentSrc;    
+  
+    // load the new audio source
     theAudioEl.load();
 
+    // tell the audio element to play
     playAudio();
+    
 }
 
-function playAudio() { 
-    theAudioEl.play(); 
-}
-function restartAudio() { 
-    theAudioEl.currentTime = 0; 
-    playAudio(); 
+
+function playAudio(trackRef) {
+    let soundSrc = `audio/${trackRef}.wav`;
+    console.log('Sound source:', soundSrc); // Log the source before creating the Audio object
+    audio = new Audio(soundSrc); // Remove 'let' to use the outer 'audio' variable
+
+    // Listen for the 'canplay' event before playing the audio
+    audio.addEventListener('canplay', function() {
+        audio.play(); // Play the audio when it's ready
+    });
 }
 
-function pauseAudio() { 
-    theAudioEl.pause(); 
+
+function pauseAudio() {
+    console.log('pause audio function called');
+    if (audio && typeof audio.pause === 'function') {
+        audio.pause(); // Pause the audio if it's playing
+    
+    };
+    
 }
+
+
 
 
 
@@ -82,4 +107,9 @@ slotZone.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 
 slotZone.forEach(zone => zone.addEventListener("drop", handleDrop)); 
 
-soundIcons.forEach(icons => icons.addEventListener('click', loadAudio)); 
+pauseButton.addEventListener ('click', pauseAudio);
+
+resetButton.addEventListener ('click', resetSounds)
+
+
+
