@@ -77,9 +77,28 @@ function playAudio(trackRef) {
     audioElements.push(audio); // Stores a Reference to the new audio tracks
     // Listen for the 'canplay' event before playing the audio
     audio.addEventListener('canplay', function() {
-        audio.play(); // Play the audio when it's ready
-    });
+        audio.play(); // play audio 
+        setTimeout(loopAudio);
+        console.log("timeout");
+    }); 
+
 }
+
+    function loopAudio() {
+    console.log('looping audio'); 
+        audioElements.forEach(audio => {
+            if (!audio.paused && audio.currentTime > 0) {
+                audio.currentTime = 0; //reset the currentTime to 0
+                audio.play(); // play audio
+
+            }
+        });
+    }
+
+    setTimeout(() => {
+        loopAudio(); //start loop immediatley
+        setInterval(loopAudio, 8000); //loop after 8 seconds infitnitley 
+    } );
 
 
 

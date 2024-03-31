@@ -5,6 +5,14 @@ h1, h2, h3, h4, p {
     padding: 0px; 
 }
 
+body {
+	margin: 0px;
+	border: 0px;
+	background: rgb(0,13,38);
+    background: linear-gradient(0deg, rgba(0,13,38,1) 0%, rgba(4,16,77,1) 55%, rgba(48,96,148,1) 100%);
+	font-size:16px;
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -14,13 +22,6 @@ h1, h2, h3, h4, p {
     padding: 8px ; 
     background-color: #05668D;
     border-radius: 24px;
-    list-style: none;
-}
-
-#mermaid_cont {
-    margin: 8px; 
-    background-color: #FFFFF8;
-    border-radius: 34px;
     list-style: none;
 }
 
@@ -46,19 +47,20 @@ h1, h2, h3, h4, p {
 
 .sand_box {
     margin: 8px;
-    padding: 4px; 
+    padding: 8px; 
     background-color: #f0f3bd;
     border-radius: 24px;
     position: relative;
     list-style: none;
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 90%;
 
 }
 
 .sand_box img {
     padding: 0;
 	width: 90%;
+    height: 90%;
 }
 
 
