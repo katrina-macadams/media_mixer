@@ -15,30 +15,34 @@
     </header>
 <main>
 
-    <div id="mermaid_cont" class="grid-con">
-        <img class="col-start-1 col-span-2" src="images/mixer_mermaid.svg" alt="mermaid">
+    <div id="mermaid_cont" class="col-span-4">
+        <object id="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
     </div>
 
 <section id="sound_boards">
-    <div class="grid-con">
+    <div id="buttons">
         <ul class="grid-con col-span-3">
             <button id="pause" class="blue_box col-start-1 col-span-1">Pause</button>
             <button id="reset" class="blue_box col-start-2 col-span-1">Reset</button>
             <button id="help" class="blue_box col-start-3 col-span-1">Help</button>
         </ul>
     </div>
+    
+<div class="grid-con"> 
+    <div id="mermaid_cont_2" class="m-col-span-6 l-col-span-6">
+        <object id="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
+    </div>
 
-    <audio id="audioEl" src="audio/bubbles.wav"></audio>
     <!-- drop sounds here -->
-        <div id="slot_cont">
-            <div class="sand_box"></div>
-            <div class="sand_box"></div>
-            <div class="sand_box"></div>
-            <div class="sand_box"></div>
+        <div id="slot_cont" class="col-span-4 m-col-span-6 l-col-span-6">
+            <div class="sand_box col-span-1 m-col-span-6 l-col-span-6"></div>
+            <div class="sand_box col-span-1 m-col-span-6 l-col-span-6"></div>
+            <div class="sand_box col-span-1 m-col-span-6 l-col-span-6"></div>
+            <div class="sand_box col-span-1 m-col-span-6 l-col-span-6"></div>
         </div>
 
         <!-- draggable sounds -->
-        <div id="sounds" class="sound_cont">
+        <div id="sounds" class="sound_cont col-span-4 m-col-start-7 l-col-start-7 m-col-span-6 l-col-span-6">
             <div id="effects">
                 <img  data-trackref="bubbles" id="bubbles" class="green_box" src="images/bubbles.PNG" alt="bubbles" width="100px" height="100px">
                 <img data-trackref="crab" id="crab" class="green_box" src="images/crab.PNG" alt="crab" width="100px" height="100px">
@@ -60,6 +64,7 @@
                 <img data-trackref="jellyfish" id="jellyfish" class="green_box" src="images/jellyfish.PNG" alt="jellyfish" width="100px" height="100px">
             </div>
         </div>
+</div>
 </section>
 </main>
 <footer>

@@ -7,6 +7,9 @@
   
   /* ---Mobile Library Grid Styles--- */
   
+  #mermaid_cont_2 {
+    display: none;
+  }
   .full-width-grid-con {
      /* set this container as a grid, with 3 columns
      the other grid will sit in the middle column, this allows for overlapping content */
@@ -42,7 +45,15 @@
 
 
  /* ---Tablet Library Grid Styles--- */
- @media screen and (min-width: 768px) { 
+ @media screen and (min-width: 750px) { 
+
+    #mermaid_cont {
+        display: none;
+    }
+
+    #mermaid_cont_2 {
+        display: block;
+    }
 
     .grid-con { 
         display: grid; 
@@ -102,6 +113,13 @@
 
 @media screen and (min-width: 1200px) { 
 
+    #mermaid_cont {
+        display: none;
+    }
+
+    #mermaid_cont_2 {
+        display: block;
+    }
     .grid-con { 
         display: grid; 
         grid-template-columns: repeat(12, minmax(0, 1fr));
