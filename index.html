@@ -18,22 +18,23 @@
 <main>
 
     <div id="mermaid_cont" class="col-span-4">
-        <object id="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
+        <object class="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
     </div>
 
 <section id="sound_boards">
+    <h2 class="hidden">boards</h2>
     <div id="buttons">
-        <ul class="grid-con col-span-3">
+        <div class="grid-con col-span-3">
             <button id="play" class="blue_box col-start-1 col-span-1">Play</button>
             <button id="pause" class="blue_box col-start-2 col-span-1">Pause</button>
             <button id="reset" class="blue_box col-start-3 col-span-1">Reset</button>
             <button id="help" class="blue_box col-start-4 col-span-1">Help</button>
-        </ul>
+        </div>
     </div>
     
 <div class="grid-con"> 
     <div id="mermaid_cont_2" class="m-col-span-6 l-col-span-6">
-        <object id="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
+        <object class="mixer_mermaid" data="images/mixer_mermaid.svg" type="image/svg+xml"></object>
     </div>
 
     <!-- drop sounds here -->
@@ -47,38 +48,43 @@
         <!-- draggable sounds -->
         <div id="sounds" class="sound_cont col-span-4 m-col-start-7 l-col-start-7 m-col-span-6 l-col-span-6">
             <div id="effects">
-                <img  data-trackref="bubbles" id="bubbles" class="green_box" src="images/bubbles.PNG" alt="bubbles" width="100px" height="100px">
-                <img data-trackref="crab" id="crab" class="green_box" src="images/crab.PNG" alt="crab" width="100px" height="100px">
+                <img  data-trackref="bubbles" id="bubbles" class="green_box" src="images/bubbles.PNG" alt="bubbles" width="100" height="100">
+                <img data-trackref="crab" id="crab" class="green_box" src="images/crab.PNG" alt="crab" width="100" height="100">
             </div>
 
             <div id="beats">
-                <img data-trackref="fish" id="fish" class="green_box" src="images/fish.PNG" alt="fish" width="100px" height="100px">
-                <img data-trackref="lobster_shrimp" id="lobster_shrimp" class="green_box" src="images/shrimp_lobster.png" alt="lobster and shrimp" width="100px" height="100px">
+                <img data-trackref="fish" id="fish" class="green_box" src="images/fish.PNG" alt="fish" width="100" height="100">
+                <img data-trackref="lobster_shrimp" id="lobster_shrimp" class="green_box" src="images/shrimp_lobster.png" alt="lobster and shrimp" width="100" height="100">
             </div>
 
 
             <div id="voices">
-                <img data-trackref="mermaid" id="mermaid" class="green_box" src="images/mermaid.PNG" alt="mermaid" width="100px" height="100px">
-                <img data-trackref="seahorse" id="seahorse" class="green_box" src="images/seahorse.PNG" alt="seahorse" width="100px" height="100px">
+                <img data-trackref="mermaid" id="mermaid" class="green_box" src="images/mermaid.PNG" alt="mermaid" width="100" height="100">
+                <img data-trackref="seahorse" id="seahorse" class="green_box" src="images/seahorse.PNG" alt="seahorse" width="100" height="100">
             </div>
 
             <div id="melodies">
-                <img data-trackref="starfish" id="starfish" class="green_box" src="images/starfish.PNG" alt="starfish" width="100px" height="100px">
-                <img data-trackref="jellyfish" id="jellyfish" class="green_box" src="images/jellyfish.PNG" alt="jellyfish" width="100px" height="100px">
+                <img data-trackref="starfish" id="starfish" class="green_box" src="images/starfish.PNG" alt="starfish" width="100" height="100">
+                <img data-trackref="jellyfish" id="jellyfish" class="green_box" src="images/jellyfish.PNG" alt="jellyfish" width="100" height="100">
             </div>
         </div>
 </div>
 </section>
 </main>
 <footer>
-
+    <section>
+        <h2>CREDITS</h2>
+<p>Sounds produced by Ahmed Sajjad for the purposes of this music mixer</p>
+<p>Icons by <a target="_blank" href="https://icons8.com">Icons8</a> and altered by Katrina MacAdams</p>
+<p>Webpage developed and designed by Katrina MacAdams</p>
+</section>
 </footer>
-</body>
 <script src="js/main.js"></script>
 <script>
     window.onload = function() {
         alert("Welcome to the Mermaid Music Mixer! Are you ready to make some waves? Get started by dragging and dropping the sea critters!");
     };
 </script>
+</body>
 </html>
 

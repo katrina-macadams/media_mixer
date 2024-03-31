@@ -99,7 +99,7 @@ function playAudio(trackRef) {
 
     setTimeout(() => {
         loopAudio(); //start loop immediatley
-        setInterval(loopAudio, 8000); //loop after 8 seconds infitnitley 
+        setInterval(loopAudio, 10000); //loop after 8 seconds infitnitley 
     } );
 
 
@@ -124,8 +124,8 @@ function showHelp() {
 function audioPlay() {
     console.log('play audio function called');
     audioElements.forEach(audio => {
-        if (audio.paused&& audio.currentTime === 0) { //stops the audio from playing when play is pressed AFTER reset
-            audio.play(); // resume playback if paused
+        if (audio.paused) {
+            audio.play(); // Resume playback if paused
         }
     });
 }

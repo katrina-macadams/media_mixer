@@ -56,8 +56,8 @@ h1 {
     background-color: #f0f3bd;
     border-radius: 24px;
     list-style: none;
-    width: 30%;
-    height: 40%;
+    width: 25%;
+    height: 35%;
 }
 
 .sand_box img {
@@ -81,14 +81,15 @@ h1 {
 .green_box {
     margin: 8px;
     padding: 8px;
-    background-color: none;
     display: flex;
     border-radius: 24px;
     list-style: none;
     cursor: pointer;
 }
 
-
+footer {
+    background-color: #05668D;
+}
 
 
 
