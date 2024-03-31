@@ -13,7 +13,9 @@ let soundBoard = document.querySelector(".sound_boards"), //puzzleBoard
 
 const
 resetButton = document.querySelector('#reset'),
-pauseButton = document.querySelector('#pause');
+playButton = document.querySelector('#play'),
+pauseButton = document.querySelector('#pause'),
+helpButton = document.querySelector('#help');
 
     
 //functions
@@ -112,6 +114,22 @@ function pauseAudio() {
 }
 
 
+function showHelp() {
+    console.log('help button clicked');
+        
+    alert("Try dragging and dropping the sea creatures into the boxes to start mixing! You can click reset to clear the slots, and pause to stop the music. ");
+        
+}
+
+function audioPlay() {
+    console.log('play audio function called');
+    audioElements.forEach(audio => {
+        if (audio.paused&& audio.currentTime === 0) { //stops the audio from playing when play is pressed AFTER reset
+            audio.play(); // resume playback if paused
+        }
+    });
+}
+
 
 //eventlisteners
 
@@ -123,7 +141,8 @@ slotZone.forEach(zone => zone.addEventListener("drop", handleDrop));
 
 pauseButton.addEventListener ('click', pauseAudio);
 
+playButton.addEventListener ('click', audioPlay);
+
 resetButton.addEventListener ('click', resetSounds);
 
-
-
+helpButton.addEventListener ('click', showHelp);
