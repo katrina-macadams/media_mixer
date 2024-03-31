@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+
 
   
 <title>Mermaid Music Mixer</title>
@@ -11,7 +13,7 @@
 
 <body>
     <header>
-        <h1 class="hidden">Music Mixer</h1>
+        <h1>Mermaid Music Mixer</h1>
     </header>
 <main>
 
@@ -22,9 +24,10 @@
 <section id="sound_boards">
     <div id="buttons">
         <ul class="grid-con col-span-3">
-            <button id="pause" class="blue_box col-start-1 col-span-1">Pause</button>
-            <button id="reset" class="blue_box col-start-2 col-span-1">Reset</button>
-            <button id="help" class="blue_box col-start-3 col-span-1">Help</button>
+            <button id="play" class="blue_box col-start-1 col-span-1">Play</button>
+            <button id="pause" class="blue_box col-start-2 col-span-1">Pause</button>
+            <button id="reset" class="blue_box col-start-3 col-span-1">Reset</button>
+            <button id="help" class="blue_box col-start-4 col-span-1">Help</button>
         </ul>
     </div>
     
@@ -72,15 +75,10 @@
 </footer>
 </body>
 <script src="js/main.js"></script>
+<script>
+    window.onload = function() {
+        alert("Welcome to the Mermaid Music Mixer! Are you ready to make some waves? Get started by dragging and dropping the sea critters!");
+    };
+</script>
 </html>
 
-<!-- 
-    sound_boards = game-boards 
-    sound_cont = puzzle_pieces = seaSound = handleStartDrag
-    sound_cont object = puzzle_pieces img
-    slot_cont = puzzle_board = slotContainer 
-    sand_box = drop-zone = dropZones = handleDragOver + handleDrop
-
-
-
- -->
